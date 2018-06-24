@@ -1,0 +1,42 @@
+page-home {
+    .logo{
+        margin-left:5%;
+    }
+    .scroll-content{
+        background:url('../../assets/imgs/texture.png') black;
+        margin-top: 100px;
+        margin-bottom: 56px;
+    }
+    
+    .card-background-page {
+        ion-card {
+          position: relative;
+          text-align: left;
+          img{
+            height:200px;
+            width:100%;
+          }
+        }
+      
+        .card-subtitle {
+          position: absolute;
+          bottom: 10%;
+          font-size: 1.5em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+          padding-left:10px;
+        }
+      
+        .card-title {
+          padding-left:10px;
+          font-size: 1.0em;
+          position: absolute;
+          bottom: 28%;
+          width: 100%;
+          color: #fff;
+        }
+      
+    }
+    
+}
