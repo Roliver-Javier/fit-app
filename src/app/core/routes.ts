@@ -4,7 +4,7 @@ export const routes ={
 
     getAllPlans: {
         name:'',
-        service: this.path+'/getAllPlans'
+        service: 'http://localhost:3001/getAllPlans'
     },
     getPlanDetails:{
         name:'',
