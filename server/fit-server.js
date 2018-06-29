@@ -1,16 +1,14 @@
 var express = require('express'),
+    app = express(),
     bodyParser = require('body-parser'),
-    plan= require('./models/Plan.js'),
-    app = express();
+    port = process.env.PORT || 3001;
+    
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(require('./controllers'));
 
-//app.use(bodyParser);
 
-app.get('/getAllPlans',function(req,resp){
-    resp.header('Content-Type', 'text/json');
-    resp.header('Access-Control-Allow-Origin', 'http://localhost:8100');
-    resp.status(200).send(JSON.stringify(plan));
-    console.log('hola');
+app.listen(port, function(){
+    console.log('Listening on port '+port);
 });
-
-app.listen(3001);
 

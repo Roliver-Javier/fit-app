@@ -1,33 +1,29 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { PageManager } from '../../utils/PageManager';
 import { PlanPage } from '../plan/plan';
 import { HttpClient } from '@angular/common/http';
-import { routes } from '../../app/core/routes';
+import { PlanService } from '../plan/plan-service';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage extends PageManager {
-  planList: any;
-  //private http: Http;
-  constructor(public navCtrl: NavController, private http: HttpClient) {
+  planList: object[];
+  planService: PlanService;
+  
+  constructor(public navCtrl: NavController,  http: HttpClient) {
     super(navCtrl);
-    //this.planService = new PlanService(http);
-    //this.planList = this.planService.getAllPlans();
-    this.getAllPlans();
-  }
-
-  public getAllPlans(): Promise<any> {
-    return this.http.get(routes.getAllPlans.service).toPromise().then(function(data){
-      console.log(JSON.stringify(data));
-    })
+    this.planService = new PlanService(http);
+    this.planService.getAllPlans().then(
+      plans => this.planList = plans,
+    );
   }
 
 
-  openPlan = function () {
-    this.goPage(PlanPage);
+  openPlan = function (plan:object) {
+      this.goPage(PlanPage, plan);  
   }
 
 }

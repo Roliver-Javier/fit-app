@@ -34,8 +34,8 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #d7e428,
-  secondary:  rgb(17, 17, 17),
+  primary:    #c1cc2e,
+  secondary:  rgb(0, 0, 0),
   danger:     #f53d3d,
   light:      white,
   dark:       rgb(17, 17, 17)
@@ -43,9 +43,9 @@ $colors: (
 $toolbar-md-title-font-size:14px;
 $toolbar-md-height: 100px;
 $toolbar-background: map-get($colors, secondary);
-$toolbar-text-color: map-get($colors, primary);
+$toolbar-text-color: map-get($colors, light);
 $tabs-background:map-get($colors, secondary);
-$tabs-tab-color-inactive: map-get($colors, light);
+
 
 $toolbar-md-title-text-color: map-get($colors, primary);
 $toolbar-ios-title-text-color:  map-get($colors, primary);
@@ -54,7 +54,7 @@ $toolbar-wp-title-text-color: map-get($colors, primary);
 // --------------------------------------------------
 // iOS only Sass variables can go here
 $tabs-ios-tab-icon-color-active: map-get($colors, primary);
-
+$tabs-md-tab-color-inactive: map-get($colors, light);
 
 // App Material Design Variables
 // --------------------------------------------------

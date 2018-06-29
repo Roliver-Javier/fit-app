@@ -1,9 +1,14 @@
 page-home {
-    .logo{
-        margin-left:5%;
+    ion-navbar{
+      margin: 0 auto;
+      text-align:center;
+      .logo{
+        width:150px;
+        height:90px;
+      }
     }
     .scroll-content{
-        background:url('../../assets/imgs/texture.png') black;
+        background:url('../../assets/imgs/texture.png')#0e0e0e;
         margin-top: 100px;
         margin-bottom: 56px;
     }
@@ -12,8 +17,11 @@ page-home {
         ion-card {
           position: relative;
           text-align: left;
+          height:140px;
+          width:93%;
+          margin:3% auto;
           img{
-            height:200px;
+            height:140px;
             width:100%;
           }
         }
@@ -35,6 +43,14 @@ page-home {
           bottom: 28%;
           width: 100%;
           color: #fff;
+        }
+        .cards{
+          .subscribe-btn{
+            bottom:7%;
+            height:40px;
+            font-weight: bold;
+            color:black;
+          }
         }
       
     }

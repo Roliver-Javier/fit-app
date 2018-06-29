@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PageManager } from '../../utils/PageManager';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,9 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-plan',
   templateUrl: 'plan.html',
 })
-export class PlanPage {
+export class PlanPage extends PageManager {
+  currentPlan: object;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    super(navCtrl);
+    this.currentPlan = navParams.data;
+    console.log(this.currentPlan);
   }
 
   ionViewDidLoad() {

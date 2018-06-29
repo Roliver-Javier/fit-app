@@ -1,28 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <img class="logo" width="75px" height="60px" src="../../assets/imgs/logo2.PNG"/>
-    <ion-title>Sudor + sacrificio = exito</ion-title>
+    <img class="logo" width="75px" height="60px" src="../../assets/imgs/logo4.jpg"/>
+    <ion-title>No pain, no gain</ion-title>
     <button ion-button menuToggle icon-only>
         <ion-icon name='menu'></ion-icon>
-      </button>
+    </button>
+    <button class="subscribe-btn" ion-button block>Inscribite ya!</button>
   </ion-navbar>
 </ion-header> 
 
 <ion-content  class="card-background-page" >
-    <button ion-button block menuToggle>Inscribite ya!</button>
-  <ion-card color="secondary" (click)="openPlan()">
-      <img src="../../assets/imgs/trainer1.jpg"/>
-      <div class="card-title">Javier Tejeda</div>
-      <div class="card-subtitle">Definicion en 12 semanas</div>
-  </ion-card>
-  <ion-card color="secondary">
-      <img src="../../assets/imgs/trainer2.png"/>
-      <div class="card-title">Javier Tejeda</div>
-      <div class="card-subtitle">Aumento muscular</div>
-  </ion-card>
-  <ion-card color="secondary">
-      <img src="../../assets/imgs/trainer3.png"/>
-      <div class="card-title">Javier Tejeda</div>
-      <div class="card-subtitle">Definicion en 12 semanas</div>
-  </ion-card>
+  <div class="cards">
+    <ion-card 
+      color="secondary" 
+      (click)="openPlan(plan)"
+      *ngFor="let plan of planList"
+      >
+        <img src="{{plan.images[0]}}"/>
+        <div class="card-title">{{plan.author}}</div>
+        <div class="card-subtitle">{{plan.title}}</div>
+    </ion-card>
+    
+  </div>
+
+  
 </ion-content>
+
