@@ -15,11 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TrainerPage {
 
+  trainerInfo : object;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.trainerInfo = navParams.data;
+      console.log(this.trainerInfo);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TrainerPage');
-  }
+  
 
 }

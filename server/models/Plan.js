@@ -27,10 +27,9 @@ exports.all = function(cb){
     cb(null, [
         {
             id: 1,
-            images:['../../assets/imgs/trainers/coach.jpg','../../assets/imgs/trainers/coach2.jpg','../../assets/imgs/trainers/coach3.jpg'],
             title: 'Definition in 12 weeks',
+            thumbnails:['../../assets/imgs/thumbnails/coach.jpg','../../assets/imgs/thumbnails/coach2.jpg','../../assets/imgs/thumbnails/coach3.jpg'],
             description:'Welcome to my plan!, Are you ready to work hard, transform your body while looking and feeling incredible? Then this is the plan for you!',
-            author: 'Javier Tejeda',
             category: {
                 level:'All levels',
                 type: 'Weightlifting',
@@ -50,6 +49,10 @@ exports.all = function(cb){
                     secs: false
                 }
             },
+            trainer_detail:{
+                name: 'Javier Tejeda',
+                images:['../../assets/imgs/trainers/trainer-1.jpg','../../assets/imgs/trainers/trainer-2.jpg','../../assets/imgs/trainers/trainer-3.jpg']
+            },
             workouts_details:{
                 routines:[
                     { 
@@ -60,10 +63,9 @@ exports.all = function(cb){
         },
         {
             id: 2,
-            images:['../../assets/imgs/trainers/coach2.jpg','../../assets/imgs/trainers/coach.jpg','../../assets/imgs/trainers/coach3.jpg'],
             title: 'Fitness Transformation',
+            thumbnails:['../../assets/imgs/thumbnails/coach2.jpg','../../assets/imgs/thumbnails/coach.jpg','../../assets/imgs/thumbnails/coach3.jpg'],
             description:'Welcome to phase 1 of my new fitness plan featuring two separate phases! in the first phase, we are goint to workout 5 days a week, withh two rest days at the end of each week.',
-            author: 'Angela Ramirez',
             category: {
                 level:'All levels',
                 type: 'Plyometrics',
@@ -82,14 +84,24 @@ exports.all = function(cb){
                     hours: false,
                     secs: false
                 }
+            },
+            trainer_detail:{
+                name: 'Angela Ramirez',
+                images:['../../assets/imgs/trainers/trainer-1.jpg','../../assets/imgs/trainers/trainer-2.jpg','../../assets/imgs/trainers/trainer-3.jpg']
+            },
+            workouts_details:{
+                routines:[
+                    { 
+                        
+                    }
+                ]
             }
         },
         {
             id: 3,
-            images:['../../assets/imgs/trainers/coach3.jpg','../../assets/imgs/trainers/coach2.jpg','../../assets/imgs/trainers/coach.jpg'],
             title: 'Gain good muscles',
+            thumbnails:['../../assets/imgs/thumbnails/coach3.jpg','../../assets/imgs/thumbnails/coach2.jpg','../../assets/imgs/thumbnails/coach.jpg'],
             description:'My plan is a 30 day Body Bulk. We will break down all of the muscles that we train into intricate parts to ensure that we are training the muscle fully and not leaving any parts of your physique untrained.',
-            author: 'Fernando Morillo',
             category: {
                 level:'All levels',
                 type: 'Weightlifting',
@@ -108,20 +120,41 @@ exports.all = function(cb){
                     hours: false,
                     secs: false
                 }
+            },
+            trainer_detail:{
+                name: 'Fernando Morillo',
+                images:['../../assets/imgs/trainers/trainer-1.jpg','../../assets/imgs/trainers/trainer-2.jpg','../../assets/imgs/trainers/trainer-3.jpg']
+            },
+            workouts_details:{
+                routines:[
+                    { 
+                        
+                    }
+                ]
             }
         },
         {
             id: 4,
-            images:['../../assets/imgs/trainers/coach.jpg','../../assets/imgs/trainers/coach2.jpg','../../assets/imgs/trainers/coach3.jpg'],
             title: 'Definition in 12 weeks',
             description:'',
-            author: 'Javier Tejeda',
+            thumbnails:['../../assets/imgs/thumbnails/coach.jpg','../../assets/imgs/thumbnails/coach2.jpg','../../assets/imgs/thumbnails/coach3.jpg'],
             category: {
                 level:'',
                 type: '',
                 location:''
             },
-            videoPath:''
+            videoPath:'',
+            trainer_detail:{
+                name: 'Javier Tejeda',
+                images:['../../assets/imgs/trainers/trainer-1.jpg','../../assets/imgs/trainers/trainer-2.jpg','../../assets/imgs/trainers/trainer-3.jpg']
+            },
+            workouts_details:{
+                routines:[
+                    { 
+                        
+                    }
+                ]
+            }
         }    
     ]
     );

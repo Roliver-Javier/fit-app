@@ -7,12 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>trainer</ion-title>
+    <ion-title>{{trainerInfo.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content>
+  <ion-slides pager>
 
-<ion-content padding>
-
+      <ion-slide *ngFor="let image of trainerInfo.images"
+      [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('+image+') no-repeat'}"
+      class="image-trainer"
+      >
+        <div class="trainer-detail">
+            <div class="name-trainer">{{trainerInfo.name}}</div>
+            <div class="stars">
+                <span>
+                  <ion-icon color="primary" name="star"></ion-icon>
+                  <ion-icon color="primary" name="star"></ion-icon>
+                  <ion-icon color="primary" name="star"></ion-icon>
+                  <ion-icon color="primary" name="star"></ion-icon>
+                  <ion-icon color="primary" name="star"></ion-icon>
+                </span>
+              </div>
+            <p class="description">
+              
+              <small>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, porro dolor. Error, asperiores modi earum enim, eum iusto assumenda alias sed, porro eveniet eligendi. Ad aperiam debitis commodi laudantium perferendis.
+              </small>
+            </p>
+            
+        </div>
+      </ion-slide>
+    
+  </ion-slides>
 </ion-content>

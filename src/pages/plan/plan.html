@@ -3,17 +3,19 @@
   <ion-navbar>
     <ion-title>
       Plan Overview<br/>
-      <small class="see-more" color="primary">About {{currentPlan.author}}</small>
+      <small class="see-more"
+             (click)="openTrainerProfile()"
+             color="primary">About {{currentPlan.trainer_detail.name}}</small>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-card class="card-detail" color="secondary">
-      <img src="{{currentPlan.images[0]}}"/>
+      <img src="{{currentPlan.thumbnails[0]}}"/>
       <section class="plan-detail">
         <div class="normal-text">
-          <p>{{currentPlan.author}}</p>
+          <p>{{currentPlan.trainer_detail.name}}</p>
           
         </div>
         <p class="big-text">{{currentPlan.title}}</p>

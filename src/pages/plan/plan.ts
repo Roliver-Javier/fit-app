@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PageManager } from '../../utils/PageManager';
 import { ModalManager } from '../../utils/ModalManager';
 import {SubscribePage } from '../subscribe/subscribe';
+import {TrainerPage} from '../trainer/trainer';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
@@ -32,5 +33,8 @@ export class PlanPage extends PageManager {
     this.modalManager.create(SubscribePage);
   }
 
+  openTrainerProfile = function(){
+    this.goPage(TrainerPage, this.currentPlan.trainer_detail);  
+  }
 
 }

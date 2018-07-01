@@ -41,7 +41,7 @@ $colors: (
   dark:       rgb(17, 17, 17)
 );
 $toolbar-md-title-font-size:14px;
-$toolbar-md-height: 100px;
+$toolbar-md-height: 50px;
 $toolbar-background: map-get($colors, secondary);
 $toolbar-text-color: map-get($colors, light);
 $tabs-background:map-get($colors, secondary);
