@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PageManager } from '../../utils/PageManager';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ModalManager } from '../../utils/ModalManager';
+import {SubscribePage } from '../subscribe/subscribe';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the PlanPage page.
@@ -16,15 +18,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PlanPage extends PageManager {
   currentPlan: object;
+  modalManager: ModalManager;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public modalCtrl:ModalController) {
     super(navCtrl);
+    this.modalManager = new ModalManager(modalCtrl);
     this.currentPlan = navParams.data;
     console.log(this.currentPlan);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PlanPage');
+  subscribe = function(){
+    this.modalManager.create(SubscribePage);
   }
+
 
 }

@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PlanPage} from '../pages/plan/plan';
+import {SubscribePage } from '../pages/subscribe/subscribe';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    PlanPage
+    PlanPage,
+    SubscribePage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    PlanPage
+    PlanPage,
+    SubscribePage
   ],
   providers: [
     StatusBar,

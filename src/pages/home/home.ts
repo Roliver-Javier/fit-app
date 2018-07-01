@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController} from 'ionic-angular';
+import { NavController,ModalController} from 'ionic-angular';
 import { PageManager } from '../../utils/PageManager';
+import { ModalManager } from '../../utils/ModalManager';
 import { PlanPage } from '../plan/plan';
 import { HttpClient } from '@angular/common/http';
 import { PlanService } from '../plan/plan-service';
+import {SubscribePage } from '../subscribe/subscribe';
+
 
 @Component({
   selector: 'page-home',
@@ -12,10 +15,14 @@ import { PlanService } from '../plan/plan-service';
 export class HomePage extends PageManager {
   planList: object[];
   planService: PlanService;
+  modalManager: ModalManager;
   
-  constructor(public navCtrl: NavController,  http: HttpClient) {
+  constructor(public navCtrl: NavController,  public http: HttpClient,
+              public modalCtrl: ModalController) {
     super(navCtrl);
+    this.modalManager = new ModalManager(modalCtrl);
     this.planService = new PlanService(http);
+
     this.planService.getAllPlans().then(
       plans => this.planList = plans,
     );
@@ -26,4 +33,7 @@ export class HomePage extends PageManager {
       this.goPage(PlanPage, plan);  
   }
 
+  subscribe = function(){
+    this.modalManager.create(SubscribePage);
+  }
 }

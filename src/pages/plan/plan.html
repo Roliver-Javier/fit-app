@@ -1,7 +1,10 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Plan Overview</ion-title>
+    <ion-title>
+      Plan Overview<br/>
+      <small class="see-more" color="primary">About {{currentPlan.author}}</small>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,6 +14,7 @@
       <section class="plan-detail">
         <div class="normal-text">
           <p>{{currentPlan.author}}</p>
+          
         </div>
         <p class="big-text">{{currentPlan.title}}</p>
         <div class="normal-text">
@@ -19,7 +23,7 @@
           </p>
         </div>
         <p class="plan-description">{{currentPlan.description}}</p>
-        <button class="join-plan-btn" ion-button>Begin Plan!</button>
+        <button class="join-plan-btn" (click)="subscribe()" ion-button>Begin Plan!</button>
       </section>
       
   </ion-card>

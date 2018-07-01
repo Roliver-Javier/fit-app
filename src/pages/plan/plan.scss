@@ -1,5 +1,9 @@
 page-plan {
-
+    .see-more{
+        color:white;
+        color: cadetblue;
+        text-decoration: underline;
+    }
     .scroll-content{
         background:url('../../assets/imgs/texture.png')#0e0e0e;
         margin-top: 100px;
@@ -14,6 +18,7 @@ page-plan {
         }  
     }
     .plan-detail{
+        
         .join-plan-btn{
             margin: 0 auto;
             text-align: center;

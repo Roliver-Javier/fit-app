@@ -1,28 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <img class="logo" width="75px" height="60px" src="../../assets/imgs/logo4.jpg"/>
-    <ion-title>No pain, no gain</ion-title>
+    <img class="logo" width="75px" height="60px" src="../../assets/imgs/logo3.png"/>
+    <ion-title>Your health is our responsability</ion-title>
     <button ion-button menuToggle icon-only>
         <ion-icon name='menu'></ion-icon>
     </button>
-    <button class="subscribe-btn" ion-button block>Inscribite ya!</button>
   </ion-navbar>
 </ion-header> 
 
 <ion-content  class="card-background-page" >
+    <button class="subscribe-btn" (click)="subscribe()" ion-button block>Inscribite ya!</button>
   <div class="cards">
-    <ion-card 
-      color="secondary" 
-      (click)="openPlan(plan)"
-      *ngFor="let plan of planList"
-      >
+    <ion-card color="secondary" (click)="openPlan(plan)" *ngFor="let plan of planList">
         <img src="{{plan.images[0]}}"/>
         <div class="card-title">{{plan.author}}</div>
         <div class="card-subtitle">{{plan.title}}</div>
     </ion-card>
-    
   </div>
-
   
 </ion-content>
 

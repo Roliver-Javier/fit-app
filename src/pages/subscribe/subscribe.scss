@@ -1,0 +1,80 @@
+page-subscribe {
+    .scroll-content{
+        background:url('../../assets/imgs/texture.png')#0e0e0e;
+       
+    }
+    .close{
+        color:white;
+        position:relative;
+        float:right;
+    }
+    .subscribe-content{
+        margin-top:30%;
+        .logo{
+            width:150px;
+            height: 50px;
+        }
+        .subscribe-header{
+            margin:0 auto;
+            text-align:center;
+            margin-top:10px;
+            margin-bottom:20px;
+            .title{
+                color:white;
+                font-weight: bold;
+                font-size:1.2em;
+            }
+
+            .subtitle{
+                margin:0 auto;
+                small{
+                    color:white;
+                    font-size:12px;
+                }
+            }
+        }
+
+        .offers{
+            text-align:center;
+            
+            ion-card{
+                // display:block;   
+                border-radius: 5px;
+                width:100%;
+                // margin:20px auto;
+                margin:0;
+                .card-header{
+                    padding:10%;
+                    font-size:14px;
+                    font-weight: bold;
+                }    
+                ion-card-content{
+                    background-color:rgba(255, 255, 255, 0.932);
+                    padding-top:10px;
+                    color:black;
+                    font-size:1.5em;
+
+                    .month-amount{
+                        font-size:14px;
+                        font-weight:800;
+                    }
+                    .billed-desc{
+                        font-size:16px;
+                    }
+                }         
+                
+                .popular{
+                    margin:0 auto;
+                    background-color:rgb(151, 221, 151);
+                }
+            }
+        }
+
+        .note{
+            color:white;
+            margin:0 auto;
+            text-align:center;
+            font-size:1.2em;
+        }
+    }
+}
