@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <img class="logo" width="75px" height="60px" src="../../assets/imgs/logo3.png"/>
+    <img class="logo" width="75px" height="60px" src="assets/imgs/logo3.png"/>
     <ion-title><small>Your health is our responsability</small></ion-title>
     <button ion-button menuToggle icon-only>
         <ion-icon name='menu'></ion-icon>
@@ -11,8 +11,9 @@
 <ion-content  class="card-background-page" >
     <button class="subscribe-btn" (click)="subscribe()" ion-button block>Subscribe now</button>
   <div class="cards">
-    <ion-card color="secondary" (click)="openPlan(plan)" *ngFor="let plan of planList">
-        <img src="{{plan.thumbnails[0]}}"/>
+    <ion-card color="secondary" (click)="openPlan(plan)" *ngFor="let plan of planList"
+    [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('+plan.thumbnails[0]+') no-repeat'}"
+    >
         <div class="card-title">{{plan.trainer_detail.name}}</div>
         <div class="card-subtitle">{{plan.title}}</div>
     </ion-card>

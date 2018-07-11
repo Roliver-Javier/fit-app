@@ -5,7 +5,7 @@ page-plan {
         text-decoration: underline;
     }
     .scroll-content{
-        background:url('../../assets/imgs/texture.png')#0e0e0e;
+        background:url('../../assets/imgs/texture.png') #0e0e0e;
         margin-top: 100px;
         margin-bottom: 56px;
         
@@ -15,6 +15,7 @@ page-plan {
         img{
           height:140px;
           width:100%;
+          background-size: cover !important;
         }  
     }
     .plan-detail{
@@ -24,7 +25,7 @@ page-plan {
             text-align: center;
             margin-bottom:5%;
             display: block;
-            color:#191818;
+            color:white;
         }
         .big-text{
             font-size:2em;
@@ -55,8 +56,8 @@ page-plan {
             height:140px;
             width:93%;
             margin:3% auto;
+            background-size: cover !important;
             img{
-              opacity:0.5;
               height:140px;
               width:100%;
               

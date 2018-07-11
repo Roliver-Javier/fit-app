@@ -1,7 +1,5 @@
 page-home {
     ion-navbar{
-      .toolbar-content{
-      }
       margin: 0 auto;
       text-align:center;
       .logo{
@@ -22,10 +20,7 @@ page-home {
           height:140px;
           width:93%;
           margin:3% auto;
-          img{
-            height:140px;
-            width:100%;
-          }
+          background-size:cover !important;
         }
       
         .card-subtitle {
@@ -51,7 +46,7 @@ page-home {
             bottom:7%;
             height:40px;
             font-weight: bold;
-            color:black;
+            color:white;
           }
         }
       

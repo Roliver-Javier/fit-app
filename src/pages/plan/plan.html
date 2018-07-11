@@ -31,16 +31,11 @@
   </ion-card>
 
   <div class="card-exercises">
-    <ion-card class="exercise" color="secondary">
-        <img src="../../assets/imgs/workouts/chest-1.jpg"/>
-        <div class="card-title">Day 1</div>
-        <div class="card-subtitle">Chest</div>
-    </ion-card>
-
-    <ion-card  class="exercise" color="secondary">
-        <img src="../../assets/imgs/workouts/squats-0.jpg"/>
-        <div class="card-title">Day 2</div>
-        <div class="card-subtitle">Squat</div>
+    <ion-card class="exercise" color="secondary" *ngFor="let routine of getRoutines()"
+    [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('+routine.image+') no-repeat'}"
+    >
+        <div class="card-title">Day {{routine.day}}</div>
+        <div class="card-subtitle">{{routine.title}}</div>
     </ion-card>
   </div>
 </ion-content>

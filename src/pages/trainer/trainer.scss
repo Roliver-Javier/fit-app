@@ -8,13 +8,18 @@ page-trainer {
     ion-content{
         .trainer-detail{
             position:absolute;
-            
-            
+            float:right;
+            padding-right:5%;
+
             .name-trainer{
-                
+                float:right;
+                right:10px;
+                color:white;
+                font-weight: bold;   
             }
             .stars{
-                
+                float:right;
+                right:10px;    
             }
             .description{   
                 word-break: break-all;
@@ -22,8 +27,9 @@ page-trainer {
                 border:none;
                 color:white;
                 width:50%;
-                
-                
+                clear:both;
+                float:right;
+                right:10px;
             }
         }
     }

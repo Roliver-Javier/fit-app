@@ -1,0 +1,76 @@
+page-profile {
+    .scroll-content{
+        background:url('../../assets/imgs/texture.png')#0e0e0e;
+        margin-top: 100px;
+        margin-bottom: 56px;
+    }
+    
+
+
+    .item-md.item-block .item-inner{
+        border-bottom:none;
+    }
+
+    .profile-thumb{
+        text-align:center;
+        background-color:#1b1b1b;
+        
+        img{
+            width:40%;
+            height:40%;
+            margin:0 auto;
+            top:10px;
+            position:relative;
+        }
+        ion-card-title{
+            font-weight: bold;
+            color:white;
+        }
+        p{
+            color:white;
+        }
+        .info-card{
+            background-color:#000000;
+            color:white;
+            padding:5%;
+            &:first-child{
+                border-right:1px solid #1b1b1b;
+            }
+            label{
+                font-weight: bold;
+                font-size:1.2em;
+            }
+        }
+    }
+
+    .plan-progress{
+        margin-top:20px;
+        
+        label{
+            font-weight: bold;
+            font-size:1em;
+            color:black; 
+        }        
+        .card{
+            background-color:#0e0e0e !important;
+            color:white;
+            border:none;
+            
+            label{
+                font-size:1em;
+                display:inline-block;
+            }
+            small{
+                display:inline-block;
+            }
+            p{
+                display:inline-block;
+            }
+            img{
+                border:2px dashed #2eaccc;
+            }
+            
+        }
+        
+    }
+}

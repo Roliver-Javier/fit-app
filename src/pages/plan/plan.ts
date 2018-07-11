@@ -33,6 +33,11 @@ export class PlanPage extends PageManager {
     this.modalManager.create(SubscribePage);
   }
 
+  getRoutines = function(){
+      return this.currentPlan.workouts_details.routines;
+  }
+
+
   openTrainerProfile = function(){
     this.goPage(TrainerPage, this.currentPlan.trainer_detail);  
   }

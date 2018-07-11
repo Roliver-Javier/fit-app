@@ -16,18 +16,18 @@
   <ion-slides pager>
 
       <ion-slide *ngFor="let image of trainerInfo.images"
-      [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('+image+') no-repeat'}"
+      [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('+image+') no-repeat'}"
       class="image-trainer"
       >
         <div class="trainer-detail">
-            <div class="name-trainer">{{trainerInfo.name}}</div>
+            <div class="name-trainer">{{trainerInfo.name}}</div><br/>
             <div class="stars">
                 <span>
-                  <ion-icon color="primary" name="star"></ion-icon>
-                  <ion-icon color="primary" name="star"></ion-icon>
-                  <ion-icon color="primary" name="star"></ion-icon>
-                  <ion-icon color="primary" name="star"></ion-icon>
-                  <ion-icon color="primary" name="star"></ion-icon>
+                  <ion-icon color="bright" name="star"></ion-icon>
+                  <ion-icon color="bright" name="star"></ion-icon>
+                  <ion-icon color="bright" name="star"></ion-icon>
+                  <ion-icon color="bright" name="star"></ion-icon>
+                  <ion-icon color="bright" name="star"></ion-icon>
                 </span>
               </div>
             <p class="description">
